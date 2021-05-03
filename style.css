@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  background: #eee;
+}
+
+h1 {
+  color: #555;
+  text-align: center;
+}
+
+.tyoujuku {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  background-image: url("tyoujuku.jpg");
+  background-size: cover;
+}
