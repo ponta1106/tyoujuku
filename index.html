@@ -22,26 +22,7 @@
       background-image: url("tyoujuku.jpg");
       background-size: cover;
     }
-
-    .choiso {
-      width: 100px;
-      height: 100px;
-      position: fixed;
-      background-image: url("choiso.jpg");
-      background-size: cover;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    .seroi {
-      width: 100px;
-      height: 100px;
-      position: fixed;
-      background-image: url("pakuseroi.jpg");
-      background-size: cover;
-      object-fit: cover;
-      border-radius: 50%;
-    }
+    
   </style>
 </head>
 <body>
@@ -58,28 +39,6 @@
     jouge = (e.clientY - 50) + "px";
     sayuu = (e.clientX - 50) + "px";
   };
-
-  // クリックでパクセロイを生成
-  document.addEventListener('dblclick', (e)=> {
-    const seroi = document.createElement("div");
-      seroi.setAttribute("class", "seroi");
-      document.body.appendChild(seroi);
-      // マウス座標を取得
-      mousePoint(e);
-      seroi.style.top = jouge;
-      seroi.style.left = sayuu;
-  });
-
-  // クリックでチョイソを生成
-  document.addEventListener('mousedown', (e)=> {
-    const iso = document.createElement("div");
-      iso.setAttribute("class", "choiso");
-      document.body.appendChild(iso);
-      // マウス座標を取得
-      mousePoint(e);
-      iso.style.top = jouge;
-      iso.style.left = sayuu;
-  });
 
   document.addEventListener('mousedown', ()=> {
     touch = true;
