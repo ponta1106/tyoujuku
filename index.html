@@ -3,63 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>超熟メーカー</title>
-  <style>
-    body {
-      margin: 0;
-      background: #eee;
-    }
-
-    h1 {
-      color: #555;
-      text-align: center;
-    }
-
-    .tyoujuku {
-      width: 100px;
-      height: 100px;
-      position: fixed;
-      background-image: url("tyoujuku.jpg");
-      background-size: cover;
-    }
-    
-  </style>
 </head>
 <body>
   <h1>マウスをドラッグして超熟を生成しよう！</h1>
 </body>
-<script>
-  
-  let jouge;
-  let sayuu;
-  let touch = false;
-  
-  // マウス座標を取得する関数
-  function mousePoint(e) {
-    jouge = (e.clientY - 50) + "px";
-    sayuu = (e.clientX - 50) + "px";
-  };
-
-  document.addEventListener('mousedown', ()=> {
-    touch = true;
-  });
-
-  document.addEventListener('mouseup', ()=> {
-    touch = false;
-  });
-  
-  document.addEventListener('mousemove', (e)=> {
-    if(touch === true) {
-      // <div class="tyoujuku"></div>を生成
-      const div = document.createElement("div");
-      div.setAttribute("class", "tyoujuku");
-      document.body.appendChild(div);
-      // マウス座標を取得
-      mousePoint(e);
-      div.style.top = jouge;
-      div.style.left = sayuu;
-    }
-  });
-
-</script>
-</html>
+<script src="script.js"></script>
+</html
